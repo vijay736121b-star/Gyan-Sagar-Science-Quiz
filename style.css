@@ -65,3 +65,10 @@ footer{
   padding:20px;
   color:#666;
 }
+.logo {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto 12px;
+    border-radius: 18px;
+   }
