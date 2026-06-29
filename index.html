@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gyan Sagar - Science Quiz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
+<title>ज्ञान सागर साइंस क्विज</title>
+
+<meta name="description" content="ज्ञान सागर साइंस क्विज - 51 विज्ञान प्रश्न, उत्तर और कारण सहित।">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <h1>📘 Gyan Sagar</h1>
-  <p>Professional Hindi Science Quiz App</p>
+<header class="header">
+<h1>📘 ज्ञान सागर साइंस क्विज</h1>
+<p>51 महत्वपूर्ण विज्ञान प्रश्न • उत्तर • कारण</p>
 </header>
 
-<main>
-  <div class="home">
-    <h2>स्वागत है</h2>
+<main class="container">
 
-    <p>छात्रों के लिए हिन्दी विज्ञान क्विज़</p>
+<section id="homeScreen">
 
-    <button id="startQuiz">
-      🚀 Start Quiz
-    </button>
-  </div>
+<h2>स्वागत है</h2>
+
+<p>
+यह क्विज विद्यार्थियों के लिए बनाया गया है।
+प्रत्येक प्रश्न का सही उत्तर देने के बाद उसका कारण भी दिखाया जाएगा।
+</p>
+
+<button id="startQuiz">
+🚀 क्विज प्रारम्भ करें
+</button>
+
+</section>
+
+<section id="quizScreen" style="display:none;">
+
+<h2 id="questionNumber"></h2>
+
+<h3 id="questionText"></h3>
+
+<div id="options"></div>
+
+<button id="nextBtn">
+अगला प्रश्न →
+</button>
+
+</section>
+
+<section id="resultScreen" style="display:none;">
+
+<h2>🎉 परिणाम</h2>
+
+<h3 id="scoreText"></h3>
+
+<button onclick="location.reload()">
+फिर से शुरू करें
+</button>
+
+</section>
+
 </main>
 
 <script src="script.js"></script>
