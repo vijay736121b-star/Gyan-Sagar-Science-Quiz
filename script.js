@@ -148,11 +148,17 @@ if (score >= 46) {
 } else {
     grade = "💪 Grade: D (Need More Practice)";
 }
-
-    scoreText.innerHTML =
+scoreText.innerHTML =
 "🎉 <b>" + playerName + "</b>, बधाई हो!<br><br>" +
-"आपने <b>" + score + " / " + questions.length + "</b> प्रश्न सही किए।<br><br>" +
+"आपने <b>" + score + " / " + questions.length + "</b> प्रश्न सही किए!<br><br>" +
 grade;
+        const percentage = Math.round((score / questions.length) * 100);
+
+document.getElementById("progressCircle").style.background =
+`conic-gradient(#28a745 ${percentage * 3.6}deg, #e0e0e0 0deg)`;
+
+document.getElementById("progressCircle").innerHTML = percentage + "%";
+    
         confetti({
   particleCount: 180,
   spread: 100,
