@@ -18,6 +18,8 @@ const optionsBox = document.getElementById("options");
 const nextBtn = document.getElementById("nextBtn");
 const startBtn = document.getElementById("startQuiz");
 const scoreText = document.getElementById("scoreText");
+const homeBtn = document.getElementById("homeBtn");
+const prevBtn = document.getElementById("prevBtn");
 
 async function loadQuestions() {
 
@@ -131,4 +133,21 @@ nextBtn.addEventListener("click", () => {
 
     }
 
+});
+// Home Button
+homeBtn.addEventListener("click", () => {
+    homeScreen.style.display = "block";
+    quizScreen.style.display = "none";
+    resultScreen.style.display = "none";
+
+    currentQuestion = 0;
+    score = 0;
+});
+
+// Previous Button
+prevBtn.addEventListener("click", () => {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion();
+    }
 });
