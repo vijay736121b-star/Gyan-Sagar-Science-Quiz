@@ -6,7 +6,7 @@
 let questions = [];
 let currentQuestion = 0;
 let score = 0;
-
+let playerName = "";
 const homeScreen = document.getElementById("homeScreen");
 const quizScreen = document.getElementById("quizScreen");
 const resultScreen = document.getElementById("resultScreen");
@@ -30,6 +30,12 @@ async function loadQuestions() {
 }
 
 startBtn.addEventListener("click", async () => {
+    playerName = document.getElementById("playerName").value.trim();
+
+if (playerName === "") {
+    alert("कृपया अपना नाम दर्ज करें।");
+    return;
+}
 
     await loadQuestions();
 
@@ -130,8 +136,9 @@ nextBtn.addEventListener("click", () => {
         quizScreen.style.display = "none";
         resultScreen.style.display = "block";
 
-        scoreText.textContent =
-            "आपने " + score + " / " + questions.length + " प्रश्न सही किए।";
+        scoreText.innerHTML =
+    "🎉 <b>" + playerName + "</b>, बधाई हो!<br><br>" +
+    "आपने <b>" + score + " / " + questions.length + "</b> प्रश्न सही किए।";
 
     }
 
