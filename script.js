@@ -135,10 +135,24 @@ nextBtn.addEventListener("click", () => {
 
         quizScreen.style.display = "none";
         resultScreen.style.display = "block";
+        let grade = "";
 
-        scoreText.innerHTML =
-    "🎉 <b>" + playerName + "</b>, बधाई हो!<br><br>" +
-    "आपने <b>" + score + " / " + questions.length + "</b> प्रश्न सही किए।";
+if (score >= 46) {
+    grade = "🏆 Grade: A+ (Excellent)";
+} else if (score >= 40) {
+    grade = "🥇 Grade: A (Very Good)";
+} else if (score >= 30) {
+    grade = "🥈 Grade: B (Good)";
+} else if (score >= 20) {
+    grade = "📘 Grade: C (Keep Practicing)";
+} else {
+    grade = "💪 Grade: D (Need More Practice)";
+}
+
+    scoreText.innerHTML =
+"🎉 <b>" + playerName + "</b>, बधाई हो!<br><br>" +
+"आपने <b>" + score + " / " + questions.length + "</b> प्रश्न सही किए।<br><br>" +
+grade;
         confetti({
   particleCount: 180,
   spread: 100,
