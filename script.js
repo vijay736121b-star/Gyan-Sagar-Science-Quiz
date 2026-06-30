@@ -57,6 +57,8 @@ function showQuestion() {
     optionsBox.innerHTML = "";
 
     nextBtn.style.display = "none";
+    homeBtn.style.display = "inline-block";
+prevBtn.style.display = currentQuestion > 0 ? "inline-block" : "none";
         q.options.forEach((option, index) => {
 
         const button = document.createElement("button");
