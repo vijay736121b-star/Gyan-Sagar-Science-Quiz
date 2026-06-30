@@ -139,6 +139,11 @@ nextBtn.addEventListener("click", () => {
         scoreText.innerHTML =
     "🎉 <b>" + playerName + "</b>, बधाई हो!<br><br>" +
     "आपने <b>" + score + " / " + questions.length + "</b> प्रश्न सही किए।";
+        confetti({
+  particleCount: 180,
+  spread: 100,
+  origin: { y: 0.6 }
+});
 
     }
 
