@@ -155,7 +155,7 @@ grade;
         const percentage = Math.round((score / questions.length) * 100);
 
 document.getElementById("progressCircle").style.background =
-`conic-gradient(#28a745 ${percentage * 3.6}deg, #e0e0e0 0deg)`;
+`conic-gradient(#FFD700 ${percentage * 3.6}deg, #e0e0e0 0deg)`;
 
 document.getElementById("progressCircle").innerHTML = percentage + "%";
     
