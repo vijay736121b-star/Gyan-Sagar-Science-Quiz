@@ -187,5 +187,21 @@ prevBtn.addEventListener("click", () => {
     }
 });
 certificateBtn.addEventListener("click", () => {
-    alert("Certificate Download feature is being added.");
+    const doc = new jspdf.jsPDF();
+
+    doc.setFontSize(22);
+    doc.text("Certificate of Achievement", 105, 30, { align: "center" });
+
+    doc.setFontSize(16);
+    doc.text("This certifies that", 105, 50, { align: "center" });
+
+    doc.setFontSize(20);
+    doc.text(playerName, 105, 65, { align: "center" });
+
+    doc.setFontSize(14);
+    doc.text(`Score: ${score}/${questions.length}`, 105, 85, { align: "center" });
+
+    doc.text("Grade: A+", 105, 100, { align: "center" });
+
+    doc.save(playerName + "-Certificate.pdf");
 });
