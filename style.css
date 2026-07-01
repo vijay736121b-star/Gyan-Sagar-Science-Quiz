@@ -103,3 +103,21 @@ footer{
     color:#0b7a2a;
     background: conic-gradient(#FFD700 0deg, #e0e0e0 0deg);
    }
+#certificateBtn{
+    display:block;
+    width:100%;
+    max-width:280px;
+    margin:15px auto;
+    padding:12px;
+    background:#ff9800;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#certificateBtn:hover{
+    background:#f57c00;
+           }
