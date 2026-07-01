@@ -20,7 +20,8 @@ const startBtn = document.getElementById("startQuiz");
 const scoreText = document.getElementById("scoreText");
 const homeBtn = document.getElementById("homeBtn");
 const prevBtn = document.getElementById("prevBtn");
-
+const certificateBtn = document.getElementById("certificateBtn");
+const { jsPDF } = window.jspdf;
 async function loadQuestions() {
 
     const response = await fetch("questions.json");
@@ -184,4 +185,7 @@ prevBtn.addEventListener("click", () => {
         currentQuestion--;
         showQuestion();
     }
+});
+certificateBtn.addEventListener("click", () => {
+    alert("Certificate Download feature is being added.");
 });
